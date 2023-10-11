@@ -1,0 +1,45 @@
+body {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#rrr {
+  position: absolute;
+  font-size: 20px; }
+
+svg#rectangle #stroke {
+  width: 100%;
+  stroke: pink;
+  height: 100%;
+  stroke-width: 5px;
+  stroke-dasharray: 920;
+  animation: sketchIn 5s 0.3s cubic-bezier(0.19, 1, 0.22, 1) forwards infinite, fillIn 1s 1s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
+
+@keyframes sketchIn {
+  0% {
+    stroke-dashoffset: 920; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes fillIn {
+  0% {
+    fill: #212121;
+    fill-opacity: 0; }
+  100% {
+    fill: #212121;
+    fill-opacity: 0; } }
+
+svg#rectangle #svg-image {
+  height: 100%;
+  width: 100%; }
+
+svg#rectangle #svg-mask {
+  height: 100%;
+  width: 100%;
+  transform: translate(50px, 100px);
+  filter: blur(5px); }
+  svg#rectangle #svg-mask rect {
+    height: 100%;
+    width: 100%;
+    fill: #212121; }
